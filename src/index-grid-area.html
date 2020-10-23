@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRID</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: 0;
+    }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      @media (min-width: 1320px) {
+        main{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "fir sec thr fou fif six";
+        gap: 20px;
+        }
+      }
+
+      @media (min-width: 900px) and (max-width: 1320px) {
+        main{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "fir sec thr" 
+        "fou fif six";
+        gap: 20px;
+        }
+      }
+
+      @media (min-width: 430px) and (max-width: 900px) {
+        main{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "fir sec" 
+        "thr fou"
+        "fif six";
+        gap: 20px;
+        }
+      }
+
+    .first, .second, .thrid, .fourth, .fifth, .sixth{
+      max-width: 200px;
+      min-width: 150px;
+      width: 100%;
+      height: 200px;
+      margin: 8px;
+    }
+
+    .first{ 
+      grid-area: fir;
+      background-color: red;
+    }
+
+    .second{
+      grid-area: sec;
+      background-color: blue;
+    }
+
+    .thrid{
+      grid-area: thr;
+      background-color: green;
+    }
+
+    .fourth{
+      grid-area: fou;
+      background-color: rgb(128, 98, 0);
+    }
+
+    .fifth{
+      grid-area: fif;
+      background-color: rgb(128, 0, 75);
+    }
+
+    .sixth{
+      grid-area: six;
+      background-color: black;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <main>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="thrid"></div>
+    <div class="fourth"></div>
+    <div class="fifth"></div>
+    <div class="sixth"></div>
+  </main>
+
+</body>
+</html>
